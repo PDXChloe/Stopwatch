@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+        <style>
+                body {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    background-color: #fff;
+                    color: #777777;
+                    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    font-weight: 400;
+                    font-size: 10px;
+                }
+    
+                .wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    background-image: linear-gradient(to right bottom,
+                    rgba(248, 247, 252, 0.7),
+                    rgba(1, 78, 180, 0.7)),url('full-background-netarts2.png');
+                    height: 90vh;
+                    padding: 50px;
+                    background-size: cover;
+                    background-position: top;
+                    clip-path: polygon(0 10vh, 100% 0 , 100% 90vh, 0 100%);
+    
+                }
+    
+                /*.overlay {*/
+                    /*position: fixed;*/
+                    /*z-index: 1;*/
+                    /*width: 100%;*/
+                    /*height: 100%;*/
+                    /*padding: 0;*/
+                    /*background-color: rgba(0,0,0,.7);*/
+                    /*display: none;*/
+                    /*animation: phaseIn 2s ease-in;*/
+    
+                /*}*/
+    
+                .button_box {
+    
+    
+                }
+    
+                .btn {
+                    width: 10em;
+                    padding: 10px;
+                    margin: 10px;
+                    font-size: 20px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    color: #fff;
+                    background-color: rgba(119, 119, 119, 0.25);
+                    transition: linear;
+                    transition-duration: .35s;
+                }
+    
+    
+    
+                .btn:hover {
+                    box-shadow: 0 10px 20px rgba(242,242,242,.95);
+                    width: 15em;
+                    outline: none;
+                    color: rgba(255,255,102,.95)
+                }
+    
+    
+                .clock_demo {
+                    font-size: 100px;
+                    color: white;
+                    backface-visibility: hidden;
+                    transition: linear;
+                    transition-duration: .35s;
+    
+                }
+    
+                .clock_demo:hover {
+                    text-shadow: 0 10px 20px rgba(255,255,102,.5);
+    
+                }
+    
+    
+                .greeting_box {
+                    color: #fff;
+                    font-size: 30px;
+                    backface-visibility: hidden;
+                    margin: 0;
+                    padding: 0;
+    
+                }
+    
+                .greeting {
+                    animation-name: moveInLeft;
+                    animation-duration: 3s;
+                    animation-timing-function: ease-out;
+                    margin: 0;
+                    padding: 2px;
+                    transition: linear;
+                    transition-duration: .35s;
+                }
+    
+                .greeting:hover {
+                    text-shadow: 0 10px 20px rgba(255,255,102,.5);
+                }
+    
+    
+            @keyframes moveInLeft {
+                0% {
+                    opacity: 0;
+                    transform: translateX(-50px);
+    
+                }
+    
+                80% {
+                    transform: translateX(10px);
+    
+                }
+    
+    
+                100% {
+                    opacity: 1;
+                    transform: translate(0);
+                }
+            }
+    
+            @keyframes moveInRight {
+                0% {
+                    opacity: 0;
+                    transform: translateX(100px);
+    
+                }
+    
+                80% {
+                    transform: translateX(-10px);
+    
+                }
+    
+                100% {
+                    opacity: 1;
+                    transform: translate(0);
+                }
+            }
+    
+            @keyframes phaseIn {
+                0% {
+                    opacity: 0;
+                    transform: translateY(100px);
+                }
+    
+                70% {
+                    /*transform: translateY(-500px);*/
+                }
+    
+    
+                100% {
+                    opacity: 1;
+                    transform: translate(0);
+                }
+            }
+    
+    
+    
+    
+        </style>
+    </head>
+    <body>
+        <!--<div class="overlay" id="overlay">-->
+            <!--<div id="greeting_box" class="greeting_box">-->
+            <!--<h2 id="greeting" class="greeting">Hello!</h2>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="wrapper" id="wrapper">
+            <div id="greeting_box" class="greeting_box">
+                <h2 id="greeting" class="greeting">Hello!</h2>
+            </div>
+
+            <div id="clock_demo" class="clock_demo"></div>
+
+            <div class="button_box">
+                <button id="clock" class="clock btn">Clock</button>
+                <button id="start_btn" class="start_btn btn">Start</button>
+                <button id="stop_btn" class="stop_btn btn">Stop</button>
+            </div>
+        </div>
+
+
+
+        <script src="stop_watch.js"></script>
+
+    </body>
+</html>
+    
+    
+    </body>
+</html>
